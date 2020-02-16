@@ -22,6 +22,8 @@ For IP Addresses this integration does a reverse lookup:
 dig -x <ip-address> ANY @dns-server
 ```
 
+## Installing Dig
+
 For this integration to work you must have the `dig` command line tool installed on your Polarity Server.  To install `dig` you can install the `bind-tools` package via `yum`:
 
 ```
