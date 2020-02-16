@@ -66,6 +66,7 @@ function _getSummaryTags(result) {
   } else if (Array.isArray(result.authority)) {
     return [`${result.authority[0][4]}`, `${result.authority[0][5]}`];
   }
+  return ['No Answers'];
 }
 
 module.exports = {
