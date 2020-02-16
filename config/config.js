@@ -15,6 +15,7 @@ module.exports = {
       file: './templates/block.hbs'
     }
   },
+  onDemandOnly: true,
   options: [
     {
         key: "dns",
