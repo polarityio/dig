@@ -9,7 +9,9 @@
 |*dig IP information* | *dig domain information* |
 
 
-The Polarity dig integration leverages the "node-dig-dns" library which provides a simple node wrapper for the unix/linux/macos dig command (domain information grope).  For domains this integration runs the dig command:
+The Polarity dig integration leverages the "node-dig-dns" library which provides a simple node wrapper for the unix/linux/macos dig command (domain information grope).  
+
+For domains this integration runs the dig command:
 ```
 dig <domain> ANY @dns-server
 ```
