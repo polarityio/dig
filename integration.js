@@ -7,7 +7,7 @@ function startup(logger) {
 }
 
 function doLookup(entities, options, cb) {
-  Logger.info('entities', { entities });
+  Logger.info({ entities }, 'entities');
   let lookupResults = [];
 
   async.each(
@@ -22,9 +22,11 @@ function doLookup(entities, options, cb) {
       if (options.dns.length > 0) {
         digOptions.push(`@${options.dns}`);
       }
+
+      Logger.trace({ digOptions }, 'dig command');
       dig(digOptions)
         .then((result) => {
-          Logger.info('lookupResults', { result });
+          Logger.info({ result }, 'lookupResults');
           if (result) {
             lookupResults.push({
               entity: entity,
@@ -66,6 +68,7 @@ function _getSummaryTags(result) {
   } else if (Array.isArray(result.authority)) {
     return [`${result.authority[0][4]}`, `${result.authority[0][5]}`];
   }
+  return ['No Answers'];
 }
 
 module.exports = {
