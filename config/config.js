@@ -20,7 +20,7 @@ module.exports = {
     {
         key: "dns",
         name: "DNS Server",
-        description: "The DNS Server to perform lookups against.  If blank, your default DNS server will be used.",
+        description: "The DNS Server (host or IP) to perform lookups against.  If blank, your default DNS server will be used.  If an invalid or unreachable DNS Server is provided your `dig` requests will eventually time out.",
         default: "",
         type: "text",
         userCanEdit: true,

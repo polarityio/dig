@@ -33,8 +33,7 @@ sudo yum install bind-utils -y
 ## Dig Integration Options
 
 ### DNS Server
-The DNS Server to perform lookups against. If blank, your default DNS server will be used.
-
+The DNS Server (host or IP) to perform lookups against.  If blank, your default DNS server will be used.  If an invalid or unreachable DNS Server is provided your `dig` requests will eventually time out.
 ## About Polarity
 
 Polarity is a memory-augmentation platform that improves and accelerates analyst decision making.  For more information about the Polarity platform please see:
