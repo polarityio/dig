@@ -1,10 +1,10 @@
 {
   "name": "dig",
-  "version": "3.0.2-beta",
+  "version": "3.1.0-beta",
   "main": "./integration.js",
   "private": true,
   "dependencies": {
-    "async": "^3.1.1",
+    "async": "^3.2.0",
     "node-dig-dns": "^0.2.10"
   }
 }
