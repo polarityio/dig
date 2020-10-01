@@ -25,6 +25,15 @@ module.exports = {
         type: "text",
         userCanEdit: true,
         adminOnly: false
+    },
+    {
+      key: "privateIpOnly",
+      name: "Private IPs Only",
+      description: "If checked, the integration will only look up private (RFC-1918) IP addresses.",
+      default: false,
+      type: "boolean",
+      userCanEdit: true,
+      adminOnly: false
     }
  ]
 };

@@ -1,0 +1,58 @@
+# This workflow will run on merge of a PR or push to master
+# It will run the integration developement checklist and if that passes
+# creates a new release with the Release and Tag name both being the 
+# package.json version and will with a created tgz file and the SHA256 has in the release body
+
+
+name: Release Current Version
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  release-current-version:
+    runs-on: ubuntu-latest
+    container: 'centos:7'
+
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v1
+    - name: Get NPM Version
+      id: package-version
+      uses: martinbeentjes/npm-get-version-action@95bc31c6dd3145896c110e382f840bb1e750d09c
+    - name: Create Build
+      id: create_build
+      run: |
+        npm install &&
+        cd .. && 
+        tar --exclude="./${{ github.event.repository.name }}/.git" --exclude="./${{ github.event.repository.name }}/.gitignore" --exclude="./${{ github.event.repository.name }}/package-lock.json" --exclude="./${{ github.event.repository.name }}/.github" -czvf "${{ github.event.repository.name }}-${{ steps.package-version.outputs.current-version }}.tgz" "./${{ github.event.repository.name }}" &&  
+        echo "::set-output name=build_hash::$(sha256sum '${{ github.event.repository.name }}-${{ steps.package-version.outputs.current-version }}.tgz' | grep -oE '^[^ ]*' )" &&
+        cd ${{ github.event.repository.name }}
+    - name: Polarity Integration Development Checklist
+      id: int-dev-checklist
+      uses: polarityio/polarity-integration-development-checklist@v1.0.0
+      with:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Create Versioned Release
+      id: create_versioned_release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: ${{ steps.package-version.outputs.current-version}}
+        release_name: ${{ steps.package-version.outputs.current-version}}
+        body: |
+          SHA256: ${{ steps.create_build.outputs.build_hash }}
+        draft: false
+        prerelease: false
+    - name: Upload Release Asset
+      id: upload-release-asset 
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_versioned_release.outputs.upload_url }} 
+        asset_path: ../${{ github.event.repository.name }}-${{ steps.package-version.outputs.current-version}}.tgz
+        asset_name: ${{ github.event.repository.name }}-${{ steps.package-version.outputs.current-version}}.tgz
+        asset_content_type: application/gzip

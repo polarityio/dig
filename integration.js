@@ -15,6 +15,11 @@ function doLookup(entities, options, cb) {
     (entity, next) => {
       let digOptions = [];
 
+      // If the private IP only option is set ignore non private IP addresses
+      if (options.privateIpOnly && !entity.isPrivateIP) {
+        return next(null);
+      }
+
       if (entity.isIP) {
         digOptions.push('-x');
       }
