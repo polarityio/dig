@@ -15,25 +15,34 @@ module.exports = {
       file: './templates/block.hbs'
     }
   },
+  request: {
+    cert: '',
+    key: '',
+    passphrase: '',
+    ca: '',
+    proxy: '',
+    rejectUnauthorized: true
+  },
   onDemandOnly: true,
   options: [
     {
-        key: "dns",
-        name: "DNS Server",
-        description: "The DNS Server (host or IP) to perform lookups against.  If blank, your default DNS server will be used.  If an invalid or unreachable DNS Server is provided your `dig` requests will eventually time out.",
-        default: "8.8.8.8",
-        type: "text",
-        userCanEdit: true,
-        adminOnly: false
+      key: 'dns',
+      name: 'DNS Server',
+      description:
+        'The DNS Server (host or IP) to perform lookups against.  If blank, your default DNS server will be used.  If an invalid or unreachable DNS Server is provided your `dig` requests will eventually time out.',
+      default: '8.8.8.8',
+      type: 'text',
+      userCanEdit: true,
+      adminOnly: false
     },
     {
-      key: "privateIpOnly",
-      name: "Private IPs Only",
-      description: "If checked, the integration will only look up private (RFC-1918) IP addresses.",
+      key: 'privateIpOnly',
+      name: 'Private IPs Only',
+      description: 'If checked, the integration will only look up private (RFC-1918) IP addresses.',
       default: false,
-      type: "boolean",
+      type: 'boolean',
       userCanEdit: true,
       adminOnly: false
     }
- ]
+  ]
 };
