@@ -1,0 +1,34 @@
+# Ignore Maven Compiled Project Files
+*/target/
+
+# Ignore IntelliJ Project Information
+*.iml
+.idea/
+
+# Ignore Sublime Text Project Files
+*.sublime-project
+*.sublime-workspace
+sftp-config.json
+
+# Ignore Eclipse Project Information
+*.settings
+*.project
+*.classpath
+dependency-reduced-pom.xml
+
+# Ignore Excel Files
+*.xlsx
+
+# Ignore local log files
+*.log
+*.remote-sync.json
+
+
+# Ignore Generated HTML README Files
+README.html
+
+# Ignored installed NPM modules
+node_modules/
+test-runner.js
+
+.polarity.conf
