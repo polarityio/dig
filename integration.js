@@ -68,6 +68,7 @@ function doLookup(entities, options, cb) {
           if (error.message || formattedStackMessage !== NEED_TO_RUN_YUM_CMD_ERROR) {
             lookupResults.push({
               entity,
+              isVolatile: true,
               data: {
                 summary: ['DNS Returned Error'],
                 details: { errorMessage: error.message }
