@@ -1,6 +1,6 @@
 {
   "name": "dig",
-  "version": "3.2.0",
+  "version": "3.2.1",
   "main": "./integration.js",
   "private": true,
   "dependencies": {

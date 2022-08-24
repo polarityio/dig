@@ -17,14 +17,16 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - uses: actions/setup-node@v1
+    - uses: actions/setup-node@v3
+      with:
+        - node-version: 12
     - name: Get NPM Version
       id: package-version
       uses: martinbeentjes/npm-get-version-action@95bc31c6dd3145896c110e382f840bb1e750d09c
     - name: Create Build
       id: create_build
       run: |
-        npm install &&
+        npm install --only=prod &&
         cd .. && 
         tar --exclude="./${{ github.event.repository.name }}/.git" --exclude="./${{ github.event.repository.name }}/.gitignore" --exclude="./${{ github.event.repository.name }}/package-lock.json" --exclude="./${{ github.event.repository.name }}/.github" -czvf "${{ github.event.repository.name }}-${{ steps.package-version.outputs.current-version }}.tgz" "./${{ github.event.repository.name }}" &&  
         echo "::set-output name=build_hash::$(sha256sum '${{ github.event.repository.name }}-${{ steps.package-version.outputs.current-version }}.tgz' | grep -oE '^[^ ]*' )" &&
