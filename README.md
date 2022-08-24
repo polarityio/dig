@@ -40,6 +40,10 @@ The DNS Server (host or IP) to perform lookups against. If left blank, the Polar
 
 If checked, the integration will only look up private (RFC-1918) IP addresses. Domains will still be looked up unless you turn domains off via the "Manage Integration Data" option.
 
+### DNS Query Types for Domains
+
+One or more query types to run via dig.  Each selected type requires a separate query to your DNS server.  If no types are selected an A Record query will be issued.  Query types only apply to domains as IPs will always be a PTR query.
+
 ### Results Filter
 
 Choose which results are displayed. Defaults to always showing a result. Can also be set to only show results with an Answer section, or to only show results with an Answer or Authority section.
