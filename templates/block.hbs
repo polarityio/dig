@@ -1,7 +1,8 @@
 {{#if details.errorMessage}}
   <div class="mt-2">
-    <div class="alert alert-danger">
-      <pre>{{details.errorMessage}}</pre>
+    <div class="alert alert-danger error-container">
+      <div class="error-title mb-2">{{fa-icon icon="exclamation-triangle" fixedWidth=true class="error-icon"}} Error Running Dig</div>
+      <div class="error-text">{{details.errorMessage}}</div>
     </div>
     <button type="button" class="p-btn btn btn-sm btn-secondary retry-btn mt-2"{{action "retryLookup"}}>
       {{#if running}}
@@ -29,9 +30,9 @@
   </div>
 
   <ul class="nav nav-tabs mt-2">
-    {{#if details.answer}}
+    {{#if (gt details.totalAnswers 0)}}
       <li class="nav-item">
-        <a {{action "changeTab" "answer"}} class="nav-link {{if (eq activeTab "answer") "active"}}" href="#">Answer ({{details.answer.length}})</a>
+        <a {{action "changeTab" "answer"}} class="nav-link {{if (eq activeTab "answer") "active"}}" href="#">Answer ({{details.totalAnswers}})</a>
       </li>
     {{/if}}
     {{#if details.authority}}
@@ -49,10 +50,9 @@
   </ul>
 
   {{#if (eq activeTab "authority")}}
-    <h1 class="p-title">{{fa-icon "shovel" fixedWidth=true}} Authority</h1>
     <div class="scrollable-block">
       {{#each details.authority as |authority index|}}
-        <div class="mt-2">
+        <div class="answer-container">
           <div>
             <span class="p-key">Domain:</span>
             <span class="p-value">{{authority.[0]}}</span>
@@ -85,39 +85,88 @@
   {{/if}}
 
   {{#if (eq activeTab "answer")}}
-    {{#if details.answer}}
-      <h1 class="p-title">{{fa-icon "shovel" fixedWidth=true}} Answers</h1>
-    {{/if}}
     <div class="scrollable-block">
-      {{#each details.answer as |answer index|}}
-        <div class="mt-2">
-          <div>
-            <span class="p-key">Domain:</span>
-            <span class="p-value">{{answer.domain}}</span>
+      {{#each details.answer.__order as | type |}}
+        {{#let (get details.answer type) as | answer |}}
+          <div class="answer-type-container">
+          <div class="sticky-title p-title {{if (and (eq answer.results.length 0) answer.searched) "no-result-title"}} {{if answer.__show "open"}}" {{action "toggleAnswerType" type}}>
+            <div class="d-flex justify-content-between w-100">
+              <div class="d-flex align-items-center">
+                {{#if answer.searched}}
+                  {{fa-icon icon="album-collection" fixedWidth=true}} {{type}} Records
+                  ({{answer.results.length}})
+                {{else if answer.__searching}}
+                  {{fa-icon icon="spinner-third" spin=true fixedWidth=true}}
+                {{else}}
+                  {{fa-icon icon="search" fixedWidth=true}} {{type}} Records
+                  (click to run search)
+                {{/if}}
+              </div>
+              <div class="d-flex align-items-center">
+                {{#if answer.__show}}
+                  {{fa-icon icon="chevron-up" fixedWidth=true}}
+                {{else}}
+                  {{fa-icon icon="chevron-down" fixedWidth=true}}
+                {{/if}}
+              </div>
+            </div>
           </div>
-          <div>
-            <span class="p-key">Value:</span>
-            <span class="p-value">{{answer.value}}</span>
-          </div>
-          <div>
-            <span class="p-key">Class:</span>
-            <span class="p-value">{{answer.class}}</span>
-          </div>
-          <div>
-            <span class="p-key">ttl:</span>
-            <span class="p-value">{{answer.ttl}} seconds</span>
-          </div>
-          <div>
-            <span class="p-key">Type:</span>
-            <span class="p-value">{{answer.type}}</span>
-          </div>
+          {{#if answer.__show}}
+            {{#if answer.__searching}}
+              <div class="answer-container">
+                {{fa-icon icon="spinner-third" spin=true fixedWidth=true}} Searching ...
+              </div>
+            {{/if}}
+            {{#if (and (eq answer.results.length 0)(not answer.__searching))}}
+              <div class="answer-container">
+                No results found
+              </div>
+            {{/if}}
+            {{#each answer.results as | result |}}
+              <div class="answer-container">
+                <div>
+                  <span class="p-key">Domain:</span>
+                  <span class="p-value">{{result.domain}}</span>
+                </div>
+                {{#if (eq type "MX")}}
+                  <div>
+                    <span class="p-key">Priority:</span>
+                    <span class="p-value">{{result.value.priority}}</span>
+                  </div>
+                  <div>
+                    <span class="p-key">Server:</span>
+                    <span class="p-value">{{result.value.server}}</span>
+                  </div>
+                {{else}}
+                  <div>
+                    <span class="p-key">Value:</span>
+                    <span class="p-value">{{result.value}}</span>
+                  </div>
+                {{/if}}
+
+                <div>
+                  <span class="p-key">Class:</span>
+                  <span class="p-value">{{result.class}}</span>
+                </div>
+                <div>
+                  <span class="p-key">ttl:</span>
+                  <span class="p-value">{{result.ttl}} seconds</span>
+                </div>
+                <div>
+                  <span class="p-key">Type:</span>
+                  <span class="p-value">{{result.type}}</span>
+                </div>
+              </div>
+            {{/each}}
+          {{/if}}
         </div>
+        {{/let}}
       {{/each}}
     </div>
   {{/if}}
 
   {{#if (eq activeTab "headers")}}
-    <div class="header-block mt-2">
+    <div class="header-block scrollable-block mt-1">
       {{#each details.header as |row|}}
         {{row}}<br />
       {{/each}}
