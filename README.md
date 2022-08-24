@@ -2,24 +2,25 @@
 
 ![mode:on demand only](https://img.shields.io/badge/mode-on%20demand%20only-blue.svg)
 
-> This integration should only be run in `On Demand Only` mode
+> This integration runs in `On Demand Only` mode
 
-| ![image](assets/overlay_ip.png) | ![image](assets/overlay_domain.png) 
-|---| --- | 
-|*dig IP information* | *dig domain information* |
+| ![overlay results with a domain](assets/overlay_domain.png) |![overlay results with an ip PTR](assets/overlay_ip_ptr.png)|![overlay results with an IP authority](assets/overlay_ip_authority.png)
+|:---:|:---:|:---:|
+|*Domain Query with Answers* |*IP Query with PTR Answer*| *IP Query with Authority section*|
 
 
-The Polarity dig integration leverages the "node-dig-dns" library which provides a simple node wrapper for the unix/linux/macos dig command (domain information grope).  
+The Polarity dig integration leverages the "node-dig-dns" library which provides a simple node wrapper for the unix/linux/macos dig command (domain information grope).  The integration allows you to specify what type of query is run.  By default, the integration runs an A record query for domains and a PTR (reverse DNS) query for IP addresses.  
 
-For domains this integration runs the dig command:
+By default, for domains, this integration runs the dig command:
+
 ```
-dig <domain> ANY @dns-server
+dig A <domain> @dns-server
 ```
 
 For IP Addresses this integration does a reverse lookup:
 
 ```
-dig -x <ip-address> ANY @dns-server
+dig -x <ip-address> @dns-server
 ```
 
 ## Installing Dig
@@ -33,11 +34,15 @@ sudo yum install bind-utils -y
 ## Dig Integration Options
 
 ### DNS Server
-The DNS Server (host or IP) to perform lookups against.  If blank, your default DNS server will be used.  If an invalid or unreachable DNS Server is provided your `dig` requests will eventually time out.
+The DNS Server (host or IP) to perform lookups against. If left blank, the Polarity Server's default DNS server will be used. If an invalid or unreachable DNS Server is provided your `dig` requests will eventually time out. Defaults to `8.8.8.8`.
 
 ### Private IPs Only
 
-If checked, the integration will only look up private (RFC-1918) IP addresses.
+If checked, the integration will only look up private (RFC-1918) IP addresses. Domains will still be looked up unless you turn domains off via the "Manage Integration Data" option.
+
+### Results Filter
+
+Choose which results are displayed. Defaults to always showing a result. Can also be set to only show results with an Answer section, or to only show results with an Answer or Authority section.
 
 ## About Polarity
 

@@ -1,6 +1,9 @@
 .scrollable-block {
-  max-height: 250px;
-  overflow-y: scroll;
+  max-height: 300px;
+  overflow-y: auto;
+  border: 1px solid #dee2e6;
+  padding: 0px;
+  border-top: 0px;
 }
 
 .header-block {
@@ -9,12 +12,61 @@
   font-family: 'Lucida Console', Monaco, monospace;
 }
 
+.answer-container {
+  padding: 5px;
+}
+
+.error-container {
+  font-size: 12px;
+  padding: 5px;
+  color: #000;
+
+  .error-icon {
+    font-size: 8px;
+  }
+  .error-text {
+    font-family: monospace;
+    white-space: pre-wrap;
+    padding: 0px;
+  }
+}
+
+.answer-type-container {
+  border-bottom: 1px solid #dee2e6;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.sticky-title {
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  margin: 0;
+  padding: 10px 5px 5px 5px;
+
+  &:hover {
+    background-color: darken(#fff, 25%);
+  }
+
+  &.open {
+    border-bottom: 1px solid #dee2e6;
+    border-top: 1px solid #fff;
+  }
+
+  &.no-result-title {
+    color: #777;
+  }
+}
+
 pre {
   margin: 3px 0px;
   padding: 5px;
   background-color: #dedede;
   white-space: pre-wrap;
 }
+
 .retry-btn {
   height: 25px;
   padding: 5px;
