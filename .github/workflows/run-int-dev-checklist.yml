@@ -1,12 +1,8 @@
-# This workflow will run on a Pull Request is created on both master develop
-# It run as series of checks from the Integration Developement Checklist
-
-
 name: Run Integration Development Checklist
 
 on:
   pull_request:
-    branches: [ master, develop ]
+    branches: [ master, main, develop ]
 
 jobs:
   run-integration-development-checklist:
@@ -19,9 +15,9 @@ jobs:
     - name: Test NPM Install
       id: test-npm-install
       run: |
-        npm install
+        npm ci
     - name: Polarity Integration Development Checklist
       id: int-dev-checklist
-      uses: polarityio/polarity-integration-development-checklist@v1.0.0
+      uses: polarityio/polarity-integration-development-checklist@main
       with:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
