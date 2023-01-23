@@ -5,13 +5,9 @@
   "logging": {
     "level": "info"
   },
-  "styles": [
-    "./styles/style.less"
-  ],
-  "entityTypes": [
-    "domain",
-    "IPv4"
-  ],
+  "styles": ["./styles/style.less"],
+  "entityTypes": ["domain", "IPv4"],
+  "defaultColor": "light-gray",
   "block": {
     "component": {
       "file": "./components/block.js"
