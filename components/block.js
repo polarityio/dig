@@ -11,12 +11,17 @@ polarity.export = PolarityComponent.extend({
       this.set('activeTab', 'headers');
     }
 
+    this.initTypes();
+  },
+  initTypes: function(){
     const types = this.get('details.answer.__order');
-    types.forEach((type) => {
-      if (this.get(`details.answer.${type}.results.length`) > 0) {
-        this.set(`details.answer.${type}.__show`, true);
-      }
-    });
+    if(types){
+      types.forEach((type) => {
+        if (this.get(`details.answer.${type}.results.length`) > 0) {
+          this.set(`details.answer.${type}.__show`, true);
+        }
+      });
+    }
   },
   actions: {
     changeTab: function (tabName) {
