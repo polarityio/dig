@@ -5,6 +5,6 @@
   "private": true,
   "dependencies": {
     "async": "^3.2.4",
-    "node-dig-dns": "https://github.com/polarityio/node-dig-dns"
+    "node-dig-dns": "^0.3.3"
   }
 }
