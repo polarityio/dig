@@ -144,9 +144,8 @@ function doLookup(entities, options, cb) {
           next(null);
         })
         .catch((err) => {
-          Logger.error(err);
           const errorObject = JSON.parse(JSON.stringify(err, Object.getOwnPropertyNames(err)));
-          Logger.error(errorObject);
+          Logger.error(errorObject, 'Error running DNS Dig');
           if (errorObject.message === 'spawn dig ENOENT') {
             next({
               detail: `Failed to run dig command. "dig" executable is likely not installed.`,
@@ -163,7 +162,7 @@ function doLookup(entities, options, cb) {
                 summary: ['DNS Returned Error'],
                 details: {
                   errorMessage:
-                    typeof errorObject.message === 'string' ? errorObject.message : JSON.stringify(err, null, 4)
+                    typeof errorObject.message === 'string' ? errorObject.message : JSON.stringify(errorObject, null, 4)
                 }
               }
             });

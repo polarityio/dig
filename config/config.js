@@ -6,7 +6,8 @@ module.exports = {
     level: 'info' //trace, debug, info, warn, error, fatal
   },
   styles: ['./styles/style.less'],
-  entityTypes: ['domain', 'ipv4'],
+  entityTypes: ['domain', 'IPv4'],
+  defaultColor: 'light-gray',
   block: {
     component: {
       file: './components/block.js'
@@ -38,7 +39,8 @@ module.exports = {
     {
       key: 'privateIpOnly',
       name: 'Private IPs Only',
-      description: 'If checked, the integration will only look up private (RFC-1918) IP addresses.  Domains will still be looked up unless you turn domains off via the "Manage Integration Data" option.',
+      description:
+        'If checked, the integration will only look up private (RFC-1918) IP addresses.  Domains will still be looked up unless you turn domains off via the "Manage Integration Data" option.',
       default: false,
       type: 'boolean',
       userCanEdit: false,
