@@ -1,4 +1,5 @@
 {
+  "polarityIntegrationUuid": "d7bb07e0-cce1-11ed-aeee-075d3490155d",
   "name": "DNS Dig",
   "acronym": "DIG",
   "description": "Provides Unix-like domain information grope (dig) information",
