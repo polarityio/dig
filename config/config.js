@@ -21,8 +21,7 @@ module.exports = {
     key: '',
     passphrase: '',
     ca: '',
-    proxy: '',
-    rejectUnauthorized: true
+    proxy: ""
   },
   onDemandOnly: true,
   options: [
