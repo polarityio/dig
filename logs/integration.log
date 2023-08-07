@@ -1,0 +1,108 @@
+{"name":"NMAP","hostname":"example2.com","pid":949,"level":30,"msg":"Logger created for /app/polarity-server/integrations/nmap","time":"2023-06-23T19:35:54.663Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":949,"level":30,"msg":"Calling integration's startup function.","time":"2023-06-23T19:35:54.663Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":949,"level":30,"msg":"Integration started.","time":"2023-06-23T19:35:54.664Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":949,"level":30,"NODE_TLS_REJECT_UNAUTHORIZED":"1","msg":"Integration Environment Variables","time":"2023-06-23T19:35:54.664Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":7209,"level":30,"msg":"Logger created for /app/polarity-server/integrations/nmap","time":"2023-06-23T22:07:30.151Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":7209,"level":30,"msg":"Calling integration's startup function.","time":"2023-06-23T22:07:30.152Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":7209,"level":30,"msg":"Integration started.","time":"2023-06-23T22:07:30.152Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":7209,"level":30,"NODE_TLS_REJECT_UNAUTHORIZED":"1","msg":"Integration Environment Variables","time":"2023-06-23T22:07:30.152Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":25534,"level":30,"msg":"Logger created for /app/polarity-server/integrations/nmap","time":"2023-07-03T15:48:23.124Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":25534,"level":30,"msg":"Calling integration's startup function.","time":"2023-07-03T15:48:23.124Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":25534,"level":30,"msg":"Integration started.","time":"2023-07-03T15:48:23.124Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":25534,"level":30,"NODE_TLS_REJECT_UNAUTHORIZED":"1","msg":"Integration Environment Variables","time":"2023-07-03T15:48:23.124Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":25583,"level":30,"msg":"Logger created for /app/polarity-server/integrations/nmap","time":"2023-07-03T15:50:17.340Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":25583,"level":30,"msg":"Calling integration's startup function.","time":"2023-07-03T15:50:17.341Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":25583,"level":30,"msg":"Integration started.","time":"2023-07-03T15:50:17.341Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":25583,"level":30,"NODE_TLS_REJECT_UNAUTHORIZED":"1","msg":"Integration Environment Variables","time":"2023-07-03T15:50:17.341Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":25615,"level":30,"msg":"Logger created for /app/polarity-server/integrations/nmap","time":"2023-07-03T15:51:33.260Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":25615,"level":30,"msg":"Calling integration's startup function.","time":"2023-07-03T15:51:33.260Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":25615,"level":30,"msg":"Integration started.","time":"2023-07-03T15:51:33.260Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":25615,"level":30,"NODE_TLS_REJECT_UNAUTHORIZED":"1","msg":"Integration Environment Variables","time":"2023-07-03T15:51:33.261Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":25692,"level":30,"msg":"Logger created for /app/polarity-server/integrations/nmap","time":"2023-07-03T15:55:15.443Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":25692,"level":30,"msg":"Calling integration's startup function.","time":"2023-07-03T15:55:15.443Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":25692,"level":30,"msg":"Integration started.","time":"2023-07-03T15:55:15.443Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":25692,"level":30,"NODE_TLS_REJECT_UNAUTHORIZED":"1","msg":"Integration Environment Variables","time":"2023-07-03T15:55:15.444Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":25767,"level":30,"msg":"Logger created for /app/polarity-server/integrations/nmap","time":"2023-07-03T15:59:46.801Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":25767,"level":30,"msg":"Calling integration's startup function.","time":"2023-07-03T15:59:46.802Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":25767,"level":30,"msg":"Integration started.","time":"2023-07-03T15:59:46.802Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":25767,"level":30,"NODE_TLS_REJECT_UNAUTHORIZED":"1","msg":"Integration Environment Variables","time":"2023-07-03T15:59:46.802Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":26569,"level":30,"msg":"Logger created for /app/polarity-server/integrations/nmap","time":"2023-07-03T16:50:58.408Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":26569,"level":30,"msg":"Calling integration's startup function.","time":"2023-07-03T16:50:58.409Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":26569,"level":30,"msg":"Integration started.","time":"2023-07-03T16:50:58.409Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":26569,"level":30,"NODE_TLS_REJECT_UNAUTHORIZED":"1","msg":"Integration Environment Variables","time":"2023-07-03T16:50:58.409Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":26591,"level":30,"msg":"Logger created for /app/polarity-server/integrations/nmap","time":"2023-07-03T16:51:26.324Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":26591,"level":30,"msg":"Calling integration's startup function.","time":"2023-07-03T16:51:26.325Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":26591,"level":30,"msg":"Integration started.","time":"2023-07-03T16:51:26.325Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":26591,"level":30,"NODE_TLS_REJECT_UNAUTHORIZED":"1","msg":"Integration Environment Variables","time":"2023-07-03T16:51:26.325Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":26702,"level":30,"msg":"Logger created for /app/polarity-server/integrations/nmap","time":"2023-07-03T16:57:56.165Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":26702,"level":30,"msg":"Calling integration's startup function.","time":"2023-07-03T16:57:56.166Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":26702,"level":30,"msg":"Integration started.","time":"2023-07-03T16:57:56.166Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":26702,"level":30,"NODE_TLS_REJECT_UNAUTHORIZED":"1","msg":"Integration Environment Variables","time":"2023-07-03T16:57:56.166Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":26753,"level":30,"msg":"Logger created for /app/polarity-server/integrations/nmap","time":"2023-07-03T17:00:17.458Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":26753,"level":30,"msg":"Calling integration's startup function.","time":"2023-07-03T17:00:17.459Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":26753,"level":30,"msg":"Integration started.","time":"2023-07-03T17:00:17.459Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":26753,"level":30,"NODE_TLS_REJECT_UNAUTHORIZED":"1","msg":"Integration Environment Variables","time":"2023-07-03T17:00:17.459Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":26815,"level":30,"msg":"Logger created for /app/polarity-server/integrations/nmap","time":"2023-07-03T17:02:11.635Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":26815,"level":30,"msg":"Calling integration's startup function.","time":"2023-07-03T17:02:11.635Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":26815,"level":30,"msg":"Integration started.","time":"2023-07-03T17:02:11.635Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":26815,"level":30,"NODE_TLS_REJECT_UNAUTHORIZED":"1","msg":"Integration Environment Variables","time":"2023-07-03T17:02:11.635Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":29867,"level":30,"msg":"Logger created for /app/polarity-server/integrations/nmap","time":"2023-07-03T20:17:38.422Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":29867,"level":30,"msg":"Calling integration's startup function.","time":"2023-07-03T20:17:38.422Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":29867,"level":30,"msg":"Integration started.","time":"2023-07-03T20:17:38.422Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":29867,"level":30,"NODE_TLS_REJECT_UNAUTHORIZED":"1","msg":"Integration Environment Variables","time":"2023-07-03T20:17:38.423Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":29892,"level":30,"msg":"Logger created for /app/polarity-server/integrations/nmap","time":"2023-07-03T20:18:18.567Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":29892,"level":30,"msg":"Calling integration's startup function.","time":"2023-07-03T20:18:18.568Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":29892,"level":30,"msg":"Integration started.","time":"2023-07-03T20:18:18.568Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":29892,"level":30,"NODE_TLS_REJECT_UNAUTHORIZED":"1","msg":"Integration Environment Variables","time":"2023-07-03T20:18:18.568Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":30120,"level":30,"msg":"Logger created for /app/polarity-server/integrations/nmap","time":"2023-07-03T20:20:02.918Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":30120,"level":30,"msg":"Calling integration's startup function.","time":"2023-07-03T20:20:02.918Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":30120,"level":30,"msg":"Integration started.","time":"2023-07-03T20:20:02.918Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":30120,"level":30,"NODE_TLS_REJECT_UNAUTHORIZED":"1","msg":"Integration Environment Variables","time":"2023-07-03T20:20:02.918Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":30165,"level":30,"msg":"Logger created for /app/polarity-server/integrations/nmap","time":"2023-07-03T20:21:57.205Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":30165,"level":30,"msg":"Calling integration's startup function.","time":"2023-07-03T20:21:57.206Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":30165,"level":30,"msg":"Integration started.","time":"2023-07-03T20:21:57.206Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":30165,"level":30,"NODE_TLS_REJECT_UNAUTHORIZED":"1","msg":"Integration Environment Variables","time":"2023-07-03T20:21:57.206Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":31496,"level":30,"msg":"Logger created for /app/polarity-server/integrations/nmap","time":"2023-07-03T20:44:31.130Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":31496,"level":30,"msg":"Calling integration's startup function.","time":"2023-07-03T20:44:31.130Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":31496,"level":30,"msg":"Integration started.","time":"2023-07-03T20:44:31.130Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":31496,"level":30,"NODE_TLS_REJECT_UNAUTHORIZED":"1","msg":"Integration Environment Variables","time":"2023-07-03T20:44:31.130Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":28460,"level":30,"msg":"Logger created for /app/polarity-server/integrations/nmap","time":"2023-07-05T18:17:42.879Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":28460,"level":30,"msg":"Calling integration's startup function.","time":"2023-07-05T18:17:42.879Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":28460,"level":30,"msg":"Integration started.","time":"2023-07-05T18:17:42.879Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":28460,"level":30,"NODE_TLS_REJECT_UNAUTHORIZED":"1","msg":"Integration Environment Variables","time":"2023-07-05T18:17:42.880Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":28488,"level":30,"msg":"Logger created for /app/polarity-server/integrations/nmap","time":"2023-07-05T18:18:26.688Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":28488,"level":30,"msg":"Calling integration's startup function.","time":"2023-07-05T18:18:26.688Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":28488,"level":30,"msg":"Integration started.","time":"2023-07-05T18:18:26.688Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":28488,"level":30,"NODE_TLS_REJECT_UNAUTHORIZED":"1","msg":"Integration Environment Variables","time":"2023-07-05T18:18:26.688Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":28762,"level":30,"msg":"Logger created for /app/polarity-server/integrations/nmap","time":"2023-07-05T18:23:30.996Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":28762,"level":30,"msg":"Calling integration's startup function.","time":"2023-07-05T18:23:30.997Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":28762,"level":30,"msg":"Integration started.","time":"2023-07-05T18:23:30.997Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":28762,"level":30,"NODE_TLS_REJECT_UNAUTHORIZED":"1","msg":"Integration Environment Variables","time":"2023-07-05T18:23:30.997Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":1376,"level":30,"msg":"Logger created for /app/polarity-server/integrations/nmap","time":"2023-07-05T20:09:30.937Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":1376,"level":30,"msg":"Calling integration's startup function.","time":"2023-07-05T20:09:30.937Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":1376,"level":30,"msg":"Integration started.","time":"2023-07-05T20:09:30.937Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":1376,"level":30,"NODE_TLS_REJECT_UNAUTHORIZED":"1","msg":"Integration Environment Variables","time":"2023-07-05T20:09:30.937Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":3669,"level":30,"msg":"Logger created for /app/polarity-server/integrations/nmap","time":"2023-07-05T21:22:10.289Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":3669,"level":30,"msg":"Calling integration's startup function.","time":"2023-07-05T21:22:10.291Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":3669,"level":30,"msg":"Integration started.","time":"2023-07-05T21:22:10.292Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":3669,"level":30,"NODE_TLS_REJECT_UNAUTHORIZED":"1","msg":"Integration Environment Variables","time":"2023-07-05T21:22:10.292Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":3820,"level":30,"msg":"Logger created for /app/polarity-server/integrations/nmap","time":"2023-07-05T21:26:21.113Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":3820,"level":30,"msg":"Calling integration's startup function.","time":"2023-07-05T21:26:21.114Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":3820,"level":30,"msg":"Integration started.","time":"2023-07-05T21:26:21.114Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":3820,"level":30,"NODE_TLS_REJECT_UNAUTHORIZED":"1","msg":"Integration Environment Variables","time":"2023-07-05T21:26:21.114Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":3837,"level":30,"msg":"Logger created for /app/polarity-server/integrations/nmap","time":"2023-07-05T21:26:33.157Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":3837,"level":30,"msg":"Calling integration's startup function.","time":"2023-07-05T21:26:33.158Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":3837,"level":30,"msg":"Integration started.","time":"2023-07-05T21:26:33.158Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":3837,"level":30,"NODE_TLS_REJECT_UNAUTHORIZED":"1","msg":"Integration Environment Variables","time":"2023-07-05T21:26:33.158Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":3869,"level":30,"msg":"Logger created for /app/polarity-server/integrations/nmap","time":"2023-07-05T21:27:15.923Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":3869,"level":30,"msg":"Calling integration's startup function.","time":"2023-07-05T21:27:15.925Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":3869,"level":30,"msg":"Integration started.","time":"2023-07-05T21:27:15.925Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":3869,"level":30,"NODE_TLS_REJECT_UNAUTHORIZED":"1","msg":"Integration Environment Variables","time":"2023-07-05T21:27:15.925Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":20654,"level":30,"msg":"Logger created for /app/polarity-server/integrations/nmap","time":"2023-07-06T14:30:26.197Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":20654,"level":30,"msg":"Calling integration's startup function.","time":"2023-07-06T14:30:26.197Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":20654,"level":30,"msg":"Integration started.","time":"2023-07-06T14:30:26.197Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":20654,"level":30,"NODE_TLS_REJECT_UNAUTHORIZED":"1","msg":"Integration Environment Variables","time":"2023-07-06T14:30:26.197Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":26583,"level":30,"msg":"Logger created for /app/polarity-server/integrations/nmap","time":"2023-07-06T17:50:36.954Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":26583,"level":30,"msg":"Calling integration's startup function.","time":"2023-07-06T17:50:36.955Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":26583,"level":30,"msg":"Integration started.","time":"2023-07-06T17:50:36.955Z","v":0}
+{"name":"NMAP","hostname":"example2.com","pid":26583,"level":30,"NODE_TLS_REJECT_UNAUTHORIZED":"1","msg":"Integration Environment Variables","time":"2023-07-06T17:50:36.955Z","v":0}

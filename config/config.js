@@ -1,12 +1,12 @@
 module.exports = {
-  name: 'DNS Dig',
-  acronym: 'DIG',
-  description: 'Provides Unix-like domain information grope (dig) information',
+  name: 'NMAP',
+  acronym: 'NMAP',
+  description: 'Enables you to kick off a scan at the click of a button',
   logging: {
     level: 'info' //trace, debug, info, warn, error, fatal
   },
   styles: ['./styles/style.less'],
-  entityTypes: ['domain', 'ipv4'],
+  entityTypes: ['ipv4'],
   block: {
     component: {
       file: './components/block.js'
@@ -18,22 +18,22 @@ module.exports = {
   onDemandOnly: true,
   options: [
     {
-        key: "dns",
-        name: "DNS Server",
-        description: "The DNS Server (host or IP) to perform lookups against.  If blank, your default DNS server will be used.  If an invalid or unreachable DNS Server is provided your `dig` requests will eventually time out.",
-        default: "",
-        type: "text",
-        userCanEdit: true,
-        adminOnly: false
+      key: 'topPorts',
+      name: 'Number of the Most Popular Ports to Scan',
+      description: "This setting controls how many ports will be scanned based on NMAP's built in port popularity",
+      default: 64,
+      type: 'number',
+      userCanEdit: true,
+      adminOnly: false
     },
     {
-      key: "privateIpOnly",
-      name: "Private IPs Only",
-      description: "If checked, the integration will only look up private (RFC-1918) IP addresses.",
+      key: 'privateIpOnly',
+      name: 'Private IPs Only',
+      description: 'If checked, the integration will only be available for private (RFC-1918) IP addresses.',
       default: false,
-      type: "boolean",
+      type: 'boolean',
       userCanEdit: true,
       adminOnly: false
     }
- ]
+  ]
 };

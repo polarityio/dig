@@ -1,104 +1,49 @@
-<div>
-  <span class="p-key">Server: </span>
-  <span class="p-value">{{details.server}}</span>
+<div class='d-flex flex-row justify-content-between align-items-center'>
+  <button {{action 'submitUrl'}} class='p-btn btn btn-light mt-1' disabled={{block._state.isSubmitting}}>
+    Scan
+  </button>
 </div>
-<div>
-  <span class="p-key">Query Time:</span>
-  <span class="p-value">{{details.time}} ms</span>
-</div>
-<div>
-  <span class="p-key">Msg Size:</span>
-  <span class="p-value">{{details.size}} bytes</span>
-</div>
-<ul class="nav nav-tabs mt-2">
-  {{#if details.answer}}
-    <li class="nav-item">
-      <a {{action "changeTab" "answer"}} class="nav-link {{if (eq activeTab "answer") "active"}}" href="#">Answer ({{details.answer.length}})</a>
-    </li>
-  {{/if}}
-  {{#if details.authority}}
-    <li class="nav-item">
-      <a {{action "changeTab" "authority"}} class="nav-link {{if (eq activeTab "authority") "active"}}" href="#">Authority ({{details.authority.length}})</a>
-    </li>
-  {{/if}}
-  <li class="nav-item">
-    <a {{action "changeTab" "headers"}} class="nav-link {{if (eq activeTab "headers") "active"}}" href="#">Headers</a>
-  </li>
-</ul>
 
-{{#if (eq activeTab "authority")}}
-  <h1 class="p-title">{{fa-icon "shovel" fixedWidth=true}} Authority</h1>
-  <div class="scrollable-block">
-    {{#each details.authority as | authority index |}}
-      <div class="mt-2">
-        <div>
-          <span class="p-key">Domain:</span>
-          <span class="p-value">{{authority.[0]}}</span>
+<div class='panel panel-default'>
+  <div class='panel-heading'>
+    <i class='fa fa-rocket fa-fw'></i>
+    Scan Target:
+    {{entity.value}}<br />
+    Scan Result:
+    {{message}}
+  </div>
+  <div class='panel-body'>
+    <div class='form-group'>
+      <div class='terminal'>
+        <div class='terminal-header'>
+          <div class='terminal-button terminal-button-red'></div>
+          <div class='terminal-button terminal-button-yellow'></div>
+          <div class='terminal-button terminal-button-green'></div>
         </div>
-        <div>
-          <span class="p-key">Value:</span>
-          <span class="p-value">{{authority.[4]}}</span>
-        </div>
-        {{#if (gt authority.length 5)}}
+        <div class='terminal-body' id='terminal-body'>
           <div>
-            <span class="p-key">Value 2:</span>
-            <span class="p-value">{{authority.[5]}}</span>
+            <style>
+              pre { overflow-x: auto; white-space: pre-wrap; white-space: -moz-pre-wrap; white-space: -pre-wrap;
+              white-space: -o-pre-wrap; word-wrap: break-word; }
+            </style>
+            <pre><span style='color:greenyellow'>{{scanResult}}</span></pre>
+            {{#if block._state.isSubmitting}}
+              <div id='1' style='visibility:hidden;'>S</div>
+              <div id='2' style='visibility:hidden;'>c</div>
+              <div id='3' style='visibility:hidden;'>a</div>
+              <div id='4' style='visibility:hidden;'>n</div>
+              <div id='5' style='visibility:hidden;'>n</div>
+              <div id='6' style='visibility:hidden;'>i</div>
+              <div id='7' style='visibility:hidden;'>n</div>
+              <div id='8' style='visibility:hidden;'>g</div>
+            {{/if}}
           </div>
-        {{/if}}
-        <div>
-          <span class="p-key">Class:</span>
-          <span class="p-value">{{authority.[2]}}</span>
-        </div>
-        <div>
-          <span class="p-key">ttl:</span>
-          <span class="p-value">{{authority.[1]}} seconds</span>
-        </div>
-        <div>
-          <span class="p-key">Type:</span>
-          <span class="p-value">{{authority.[3]}}</span>
         </div>
       </div>
-    {{/each}}
+    </div>
   </div>
-{{/if}}
+</div>
 
-{{#if (eq activeTab "answer")}}
-  {{#if details.answer}}
-    <h1 class="p-title">{{fa-icon "shovel" fixedWidth=true}} Answers</h1>
-  {{/if}}
-  <div class="scrollable-block">
-    {{#each details.answer as | answer index |}}
-      <div class="mt-2">
-        <div>
-          <span class="p-key">Domain:</span>
-          <span class="p-value">{{answer.domain}}</span>
-        </div>
-        <div>
-          <span class="p-key">Value:</span>
-          <span class="p-value">{{answer.value}}</span>
-        </div>
-        <div>
-          <span class="p-key">Class:</span>
-          <span class="p-value">{{answer.class}}</span>
-        </div>
-        <div>
-          <span class="p-key">ttl:</span>
-          <span class="p-value">{{answer.ttl}} seconds</span>
-        </div>
-        <div>
-          <span class="p-key">Type:</span>
-          <span class="p-value">{{answer.type}}</span>
-        </div>
-      </div>
-    {{/each}}
-  </div>
-{{/if}}
-
-{{#if (eq activeTab "headers")}}
-  <div class="header-block mt-2">
-    {{#each details.header as | row | }}
-      {{row}}<br>
-    {{/each}}
-  </div>
-{{/if}}
-
+<button {{action 'runOnDemandLookup'}} class='p-btn btn btn-light mt-1' disabled={{block._state.scanNotRun}}>
+  Send Results to AI for Analysis
+</button>

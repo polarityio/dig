@@ -3,8 +3,64 @@
   overflow-y: scroll;
 }
 
-.header-block{
+.header-block {
   background-color: #ddd;
   padding: 5px;
-  font-family: 'Lucida Console', Monaco, monospace
+  font-family: 'Lucida Console', Monaco, monospace;
+}
+
+.terminal {
+  background-color: #2d2d2d;
+  border: 1px solid #444;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  color: #d0d0d0;
+  font-family: monospace;
+  font-size: 12px;
+  height: 200px;
+  margin: 10px 0;
+  position: relative;
+  width: 100%;
+}
+
+.terminal-header {
+  background-color: #444;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  display: flex;
+  justify-content: flex-end;
+  padding: 5px;
+}
+
+.terminal-button {
+  border-radius: 50%;
+  height: 12px;
+  margin-left: 5px;
+  width: 12px;
+}
+
+.terminal-button-red {
+  background-color: #998483;
+}
+
+.terminal-button-yellow {
+  background-color: #ada987;
+}
+
+.terminal-button-green {
+  background-color: #3d5c3e;
+}
+
+.terminal-body {
+  height: calc(100% - 27px);
+  overflow-y: scroll;
+  padding: 5px;
+}
+
+.terminal-command {
+  color: #a6e22e;
+}
+
+.terminal-output {
+  color: #d0d0d0;
 }
