@@ -4,7 +4,7 @@
   "main": "./integration.js",
   "private": true,
   "dependencies": {
-    "async": "^3.2.4",
+    "async": "^3.2.5",
     "node-dig-dns": "^0.3.3"
   }
 }
